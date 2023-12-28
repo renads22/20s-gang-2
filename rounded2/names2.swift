@@ -59,9 +59,7 @@ struct names2: View {
                             .background(Color(red: 0.67, green: 0.8, blue: 0.78))
                             .cornerRadius(5)
                     }
-                    Button(action: {
-                        // أضف الإجراء الذي ترغب في تنفيذه عند النقر على الزر هنا
-                    }) {
+                    NavigationLink(destination: babynames()) {
                         Text("إضافة")
                             .foregroundColor(.white)
                             .padding(.horizontal, 10)
