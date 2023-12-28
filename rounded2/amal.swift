@@ -8,6 +8,18 @@
 import SwiftUI
 import SwiftData
 import UserNotifications
+class hapticManger {
+    static let instance = hapticManger()
+    func notification(type: UINotificationFeedbackGenerator.FeedbackType) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(type)
+    }
+    func impact(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+        let generator = UIImpactFeedbackGenerator(style: style)
+        generator.impactOccurred()
+    }
+    
+}
 
 struct amal: View {
     
@@ -84,7 +96,9 @@ struct amal: View {
                 
                 print("the item saved is \(userText) , \(selection)")
 
+                hapticManger.instance.notification(type: .warning)
                 
+                hapticManger.instance.impact(style: .heavy)
                 
                 
             }
