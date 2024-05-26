@@ -15,7 +15,7 @@ struct ContentView: View {
             
             VStack(spacing: 20) {
 
-            NavigationLink(destination: amal()) {
+            NavigationLink(destination: BabyInfo()) {
                 
                 Image(systemName: "plus.circle")
                     .font(.system(size: 45))

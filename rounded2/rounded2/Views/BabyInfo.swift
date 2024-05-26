@@ -21,7 +21,7 @@ class hapticManger {
     
 }
 
-struct amal: View {
+struct BabyInfo: View {
     
     @Environment(\.modelContext) var modelContext
 
@@ -32,6 +32,7 @@ struct amal: View {
     
     var body: some View {
         VStack {
+
             HStack {
                     Spacer()
                     Text("اسم التذكير")
@@ -116,5 +117,5 @@ struct amal: View {
 }
 
 #Preview {
-    amal()
+    BabyInfo()
 }

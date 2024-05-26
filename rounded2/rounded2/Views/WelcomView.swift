@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct roro: View {
+struct WelcomView: View {
     @State private var showSplash = true
     @State private var showContentView = false
     
@@ -47,6 +47,6 @@ struct roro: View {
 
 struct roro_Previews: PreviewProvider {
     static var previews: some View {
-        roro()
+        WelcomView()
     }
 }
