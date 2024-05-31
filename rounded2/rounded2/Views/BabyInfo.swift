@@ -22,38 +22,37 @@ class hapticManger {
 }
 
 struct BabyInfo: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.modelContext) var modelContext
 
     @State private var userText: String = ""
    // @State private var timee = Date.now
     @State private var toggleIsOn : Bool = false
     @State var selection : Int = 2
-    
+    var requestIdentifier: String?
+
     var body: some View {
         VStack {
 
-            HStack {
-                    Spacer()
-                    Text("اسم التذكير")
+            
+                    Text("Reminder Name")
                         .font(.title)
-                }
-                .multilineTextAlignment(.trailing)
-            TextField("اكتب التذكير هنا", text: $userText )
+                      //  .multilineTextAlignment(.trailing)
+            
+            TextField("Write the Reminder Name here", text: $userText )
                             .textFieldStyle(.roundedBorder)
                             //.padding()
-                            .multilineTextAlignment(.trailing)
+                           // .multilineTextAlignment(.trailing)
                             .overlay(
                                 
                         RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.black, lineWidth: 1)// تعيين لون الحدود بالأسود
                                             )
-            HStack {
-                Spacer()
-                Text("التكرار")
+           
+                Text("Repetition")
                     .font(.title)
-            }
-            Text("اختر كم مره تريد ان يصلك الاشعار")
+
+            Text("Choose how many times you want to receive the notification")
             Picker(selection: $selection, label: Text(""),
                    content: {
                 ForEach(2..<6) {
@@ -63,16 +62,9 @@ struct BabyInfo: View {
                 }
                 
             })
-//            Button("السماح بالتذكير") {
-//                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-//                    if success {
-//                        print("تم")
-//                    } else if let error = error {
-//                        print(error.localizedDescription)
-//                    }}
-//            }
+
             
-            Button("تأكيد") {
+            Button("Save") {
                 var seconds = 0
                 if selection == 1{
                    seconds = 60
@@ -93,6 +85,7 @@ struct BabyInfo: View {
                 
                 
                 let reminder = Riminder(title: userText, count: selection)
+                reminder.requestIdentifier = reguest.identifier
                 modelContext.insert(reminder)
                 
                 print("the item saved is \(userText) , \(selection)")
@@ -100,9 +93,20 @@ struct BabyInfo: View {
                 hapticManger.instance.notification(type: .warning)
                 
                 hapticManger.instance.impact(style: .heavy)
+                // Navigate to ContentView
+                                presentationMode.wrappedValue.dismiss()
+                
                 
                 
             }
+            .buttonStyle(BorderlessButtonStyle())
+            .padding(.horizontal, 50)
+            
+            .padding(.vertical, 14)
+            .foregroundColor(.white)
+            .background(.color2)
+            .cornerRadius(10)
+
             
         }.onAppear(perform: {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in

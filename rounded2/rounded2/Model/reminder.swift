@@ -11,10 +11,13 @@ import SwiftData
 class Riminder {
     var title: String = ""
     var count: Int
-    
+    var id: String = UUID().uuidString
+    var requestIdentifier: String?
     
     init(title: String, count: Int) {
         self.title = title
         self.count = count
+        self.id = UUID().uuidString
+        self.requestIdentifier = nil
     }
 }

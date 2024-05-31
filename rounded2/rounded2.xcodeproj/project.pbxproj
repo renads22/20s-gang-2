@@ -13,7 +13,6 @@
 		D53BF89E2B32CBD700EB4572 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BF89D2B32CBD700EB4572 /* ContentView.swift */; };
 		D53BF8A02B32CBD700EB4572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53BF89F2B32CBD700EB4572 /* Assets.xcassets */; };
 		D53BF8A32B32CBD700EB4572 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53BF8A22B32CBD700EB4572 /* Preview Assets.xcassets */; };
-		D57652CD2B396FCC0078A8F6 /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57652CC2B396FCC0078A8F6 /* WelcomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		D53BF89D2B32CBD700EB4572 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D53BF89F2B32CBD700EB4572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53BF8A22B32CBD700EB4572 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D57652CC2B396FCC0078A8F6 /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				D53BF89D2B32CBD700EB4572 /* ContentView.swift */,
-				D57652CC2B396FCC0078A8F6 /* WelcomView.swift */,
 				D50ABA8F2B39805500762500 /* BabyInfo.swift */,
 			);
 			path = Views;
@@ -163,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53BF89E2B32CBD700EB4572 /* ContentView.swift in Sources */,
-				D57652CD2B396FCC0078A8F6 /* WelcomView.swift in Sources */,
 				D53BF89C2B32CBD700EB4572 /* rounded2App.swift in Sources */,
 				D50ABA902B39805500762500 /* BabyInfo.swift in Sources */,
 				D50ABA8E2B397FE400762500 /* reminder.swift in Sources */,
@@ -300,6 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rounded2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7246UF2S5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -328,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rounded2/Preview Content\"";
+				DEVELOPMENT_TEAM = 7246UF2S5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
