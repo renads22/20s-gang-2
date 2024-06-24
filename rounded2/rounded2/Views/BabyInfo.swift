@@ -55,10 +55,14 @@ struct BabyInfo: View {
             Text("Choose how many times you want to receive the notification")
             Picker(selection: $selection, label: Text(""),
                    content: {
-                ForEach(2..<6) {
+                ForEach(0..<7) {
                    
-                    number in Text("\(number)")
-                        .tag("\(number)")
+                    number in
+                    if number > 1 {
+                        Text("every \(number) hours")
+                            .tag("\(number)")
+                    }
+                    
                 }
                 
             })
