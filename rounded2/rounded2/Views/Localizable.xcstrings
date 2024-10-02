@@ -1,0 +1,132 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " manage your baby's daily tasks with ease." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نظم مهام طفلك اليومية بكل سهولة ."
+          }
+        }
+      }
+    },
+    " set reminders for feeding, sleeping, and more, so you can stay informed about your baby's schedule . " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قم بوضع تذكير لمواعيد الطعام ، النوم ، والمزيد ، حتى تبقى على معرفة بجدول مهام  طفلك ."
+          }
+        }
+      }
+    },
+    "BabyTasks" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مهام الطفل"
+          }
+        }
+      }
+    },
+    "Choose how many times you want to receive the notification" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر كم مره تريد ان يصلك الإشعار "
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف"
+          }
+        }
+      }
+    },
+    "every %lld hours" : {
+
+    },
+    "Reminder Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم التذكير"
+          }
+        }
+      }
+    },
+    "Reminder System" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نظام التذكير"
+          }
+        }
+      }
+    },
+    "Repetition" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التكرار"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البدء"
+          }
+        }
+      }
+    },
+    "Welcome to rawaf" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبا بك في رواف"
+          }
+        }
+      }
+    },
+    "Write the Reminder Name here" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب اسم التذكير هنا"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

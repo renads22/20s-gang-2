@@ -10,10 +10,20 @@ import SwiftData
 
 @main
 struct rounded2App: App {
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .modelContainer(for: Riminder.self)
+            if hasSeenOnboarding {
+                ContentView() // Main content after onboarding
+            } else {
+                LogoView() // The logo page that navigates to onboarding
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            hasSeenOnboarding = true // Mark onboarding as seen after it appears once
+                        }
+                    }
+            }
         }
     }
 }
