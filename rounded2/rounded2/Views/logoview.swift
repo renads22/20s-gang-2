@@ -6,40 +6,60 @@
 //
 
 import SwiftUI
+extension UserDefaults {
+    
+    var welcomeScreenShown: Bool {
+        get {
+            return (UserDefaults.standard.value(forKey: "welcomeScreenShown") as? Bool) ?? false
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "welcomeScreenShown")
+        }
+    }
+    
+}
+
 
 struct LogoView: View {
     @State private var showLogo = true
     @State private var navigateToOnboarding = false
+    @State var isActive : Bool = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                if navigateToOnboarding {
-                    OnboardingIntroView() // Your onboarding view
+                if isActive {
+                    if UserDefaults.standard.welcomeScreenShown{
+                        ContentView()
+                    }
+                    else{
+                        OnboardingIntroView() // Your onboarding view
+                    }
+    
                 } else {
                     VStack {
                         if showLogo {
                             Image("logo")
                                 .resizable()
                                 .scaledToFit() // Ensures aspect ratio is preserved
-                                .frame(width: 600, height: 550)
+                                .frame(width: 340, height: 450)
                                 .padding() // Adds some padding around the image
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                         withAnimation {
                                             showLogo = false
-                                            navigateToOnboarding = true
+                                            self.isActive = true 
                                         }
                                     }
                                 }
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.white) // Set a background color if needed
+                    .background(Color.backColore) // Set a background color if needed
                     .edgesIgnoringSafeArea(.all) // Ensures the content fills the screen
                 }
             }
-            .navigationBarHidden(true) // Hide navigation bar to show the full logo
+            //.navigationBarHidden(true) // Hide navigation bar to show the full logo
         }
     }
 }

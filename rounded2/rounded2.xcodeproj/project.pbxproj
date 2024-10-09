@@ -21,10 +21,10 @@
 
 /* Begin PBXFileReference section */
 		D50ABA8D2B397FE400762500 /* reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reminder.swift; sourceTree = "<group>"; };
-		D50ABA8F2B39805500762500 /* BabyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyInfo.swift; sourceTree = "<group>"; };
+		D50ABA8F2B39805500762500 /* BabyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyInfo.swift; sourceTree = "<group>"; tabWidth = 3; usesTabs = 0; };
 		D53BF8982B32CBD700EB4572 /* rounded2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rounded2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53BF89B2B32CBD700EB4572 /* rounded2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rounded2App.swift; sourceTree = "<group>"; };
-		D53BF89D2B32CBD700EB4572 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D53BF89D2B32CBD700EB4572 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 3; };
 		D53BF89F2B32CBD700EB4572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53BF8A22B32CBD700EB4572 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5F334342C95E545005D3032 /* logoview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoview.swift; sourceTree = "<group>"; };

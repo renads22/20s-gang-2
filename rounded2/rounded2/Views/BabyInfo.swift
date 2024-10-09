@@ -29,23 +29,31 @@ struct BabyInfo: View {
     @State private var toggleIsOn: Bool = false
     @State var selection: Int = 2
     var requestIdentifier: String?
-
+    @Environment(\.colorScheme) var colorScheme
+    
+    
     var body: some View {
         VStack {
             Text("Reminder Name")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
 
             TextField("Write the Reminder Name here", text: $userText)
-                .textFieldStyle(.roundedBorder)
+                //.textFieldStyle(.roundedBorder)
+                .padding(7)
+                //.foregroundColor(colorScheme == .dark ? .black : .black)
+                .background(colorScheme == .dark ? Color.gray.opacity(0.9) : .white)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 1) // تعيين لون الحدود بالأسود
                 )
 
             Text("Repetition")
                 .font(.title)
+                .foregroundColor(Color("TextColor"))
 
             Text("Choose how many times you want to receive the notification")
+                .foregroundColor(Color("TextColor"))
             Picker(selection: $selection, label: Text(""),
                    content: {
                 ForEach(0..<7) { number in
@@ -103,7 +111,7 @@ struct BabyInfo: View {
         }
         .padding()
         .background(
-            Image("onb3")
+            Image("background1")
                 .resizable()
                 .scaledToFill()
                 // Ensures the image fills the entire screen
@@ -117,3 +125,4 @@ struct BabyInfo: View {
 #Preview {
     BabyInfo()
 }
+

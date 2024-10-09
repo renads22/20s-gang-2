@@ -12,10 +12,14 @@ struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @Query var reminders: [Riminder]
     
+   init(){
+      UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+   }
+   
     var body: some View {
         NavigationView {
             ZStack {  // Use ZStack to layer the background image and content
-                Image("backimge")  // Your background image
+                Image("background1")  // Your background image
                     .resizable()
                     .scaledToFill()  // Ensures the image fills the entire screen
                     .ignoresSafeArea()  // Extend the image to cover safe area insets
@@ -27,6 +31,8 @@ struct ContentView: View {
                             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                             .padding(.leading, 300)
                             .navigationTitle("BabyTasks")
+                            .foregroundColor(Color("TextColor"))
+                        
                     }
                     
                     ScrollView {
