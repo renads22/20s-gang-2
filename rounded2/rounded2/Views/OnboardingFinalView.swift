@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingFinalView: View {
     //@AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
-
+   // @Environment(\.presentationMode) var presentationMode
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -36,7 +36,7 @@ struct OnboardingFinalView: View {
                    // .offset(x: 5, y: 160) // Adjust x and y for text position
                 
                 // Button Overlay on Top of the Image
-                VStack {
+                
                     Spacer()
                     
                     NavigationLink(destination: ContentView()) {
@@ -54,10 +54,12 @@ struct OnboardingFinalView: View {
 //                    .simultaneousGesture(TapGesture().onEnded {
 //                        hasSeenOnboarding = true // Set flag to true when onboarding is completed
 //                    })
-                }
+                
             }
         }
         .edgesIgnoringSafeArea(.all) // Ensures the GeometryReader's ZStack takes the full screen
+        //.navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         .background(
             Image("background2")
                 .resizable()

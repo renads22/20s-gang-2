@@ -30,7 +30,8 @@ struct ContentView: View {
                             .font(.system(size: 45))
                             .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                             .padding(.leading, 300)
-                            .navigationTitle("BabyTasks")
+                            //.navigationTitle("BabyTasks")
+                            .navigationBarTitle("BabyTasks", displayMode: .inline)
                             .foregroundColor(Color("TextColor"))
                         
                     }
@@ -78,6 +79,7 @@ struct ContentView: View {
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

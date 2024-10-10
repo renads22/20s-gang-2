@@ -119,6 +119,7 @@ struct BabyInfo: View {
                 .frame(width: 600, height: 500)
                 // Move the image down slightly
         )
+        
     }
 }
 

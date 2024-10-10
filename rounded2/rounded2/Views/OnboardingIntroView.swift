@@ -59,6 +59,7 @@ struct OnboardingIntroView: View {
                 
             }
             //.navigationBarHidden(true) // Hides the navigation bar
+            .navigationBarBackButtonHidden(true)
             .background(
                 Image("background2")
                     .resizable()
